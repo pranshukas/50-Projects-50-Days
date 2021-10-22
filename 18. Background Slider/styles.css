@@ -11,7 +11,6 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    background-image: url("/images/1.jpg");
     background-position: center center;
     background-size: cover;
     transition: 0.4s ease;
