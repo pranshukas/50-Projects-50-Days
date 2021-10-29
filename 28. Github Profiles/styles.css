@@ -79,7 +79,7 @@ body {
 
 .user-info ul {
     display: flex;
-    list-style: none;
+    list-style-type: none;
     justify-content: space-between;
     padding: 0;
     max-width: 400px;
