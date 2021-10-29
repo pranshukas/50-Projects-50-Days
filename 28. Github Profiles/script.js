@@ -8,22 +8,22 @@ async function getUser(username) {
     try {
         const { data } = await axios(APIURL + username);
         createUserCard(data);
+        getRepos(username);
     } catch (err) {
         if (err.response.status === 404) {
-            createErrorCard("No Profile with this Username");
+            createErrorCard("No Profile with this Username :(");
         }
     }
 }
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const username = search.value;
-
-    if (username) {
-        getUser(username);
-        search.value = "";
+async function getRepos(username) {
+    try {
+        const { data } = await axios(APIURL + username + "/repos?sort=created");
+        addReposToCard(data);
+    } catch (err) {
+        createErrorCard("Problem in Fetching Repos :(");
     }
-});
+}
 
 function createUserCard(user) {
     const { name, avatar_url, bio, followers, following, public_repos } = user;
@@ -40,13 +40,7 @@ function createUserCard(user) {
                 <li>${public_repos} <strong>Repos</strong></li>
             </ul>
 
-            <div id="repos">
-                <a href="#" class="repo">Exam-Time-Table-Generator</a>
-                <a href="#" class="repo">pranshukas</a>
-                <a href="#" class="repo">winter-of-contributing</a>
-                <a href="#" class="repo">CSES-problem-solutions</a>
-                <a href="#" class="repo">cops-website</a>
-            </div>
+            <div id="repos"></div>
         </div>
     </div>`;
     main.innerHTML = cardHTML;
@@ -60,3 +54,27 @@ function createErrorCard(msg) {
     `;
     main.innerHTML = cardHTML;
 }
+
+function addReposToCard(repos) {
+    const reposEl = document.getElementById("repos");
+
+    repos.slice(0, 5).forEach((repo) => {
+        const repoEl = document.createElement("a");
+        repoEl.classList.add("repo");
+        repoEl.href = repo.html_url;
+        repoEl.target = "_blank";
+        repoEl.innerText = repo.name;
+
+        reposEl.appendChild(repoEl);
+    });
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const user = search.value;
+
+    if (user) {
+        getUser(user);
+        search.value = "";
+    }
+});
