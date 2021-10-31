@@ -14,6 +14,24 @@ const randomFunc = {
     symbol: getRandomSymbol,
 };
 
+clipboardEl.addEventListener("click", () => {
+    const textArea = document.createElement("textarea");
+    const password = resultEl.innerHTML;
+
+    if (!password) {
+        return;
+    } else {
+        textArea.value = password;
+        textArea.select();
+        textArea.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(textArea.value);
+
+        alert("Password Copied Clipboard !");
+    }
+});
+
 generateEl.addEventListener("click", () => {
     const length = +lengthEl.value;
     const hasLower = lowercaseEl.checked;
