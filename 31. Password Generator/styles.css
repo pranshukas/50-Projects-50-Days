@@ -76,3 +76,11 @@ h2 {
     align-items: center;
     margin: 15px 0;
 }
+
+*:focus {
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
