@@ -14,7 +14,11 @@ range.addEventListener("input", (e) => {
     const max = +e.target.max;
     const min = +e.target.min;
 
-    const left = value * (num_width / max) - numLabelWidth / 2;
+    const left = value * (num_width / max) - numLabelWidth / 2 + scale(value, min, max, 10, -10);
 
     label.style.left = `${left}px`;
 });
+
+const scale = (num, in_min, in_max, out_min, out_max) => {
+    return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+};
