@@ -15,7 +15,7 @@ body {
 }
 
 .bg {
-    background: url("/images/landscape.jpg") no-repeat center center/cover;
+    background: url("images/landscape.jpg") no-repeat center center/cover;
     position: absolute;
     top: -30px;
     left: -30px;
