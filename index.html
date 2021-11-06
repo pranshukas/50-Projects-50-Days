@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Project</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
 
-    <body>
-        <h1>Project Starters</h1>
-        <script src="script.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://kit.fontawesome.com/3da1a747b2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="container">
+            <picture>
+                <source srcset="/assets/images/logo.png" media="(min-width: 700px)" />
+                <img class="logo" src="/assets/images/logo.png" alt="" />
+            </picture>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="showcase bg-primary">
+        <div class="container">
+            <h2>50 Projects in 50 Days</h2>
+            <h1>50 Mini Web Projects using Vannila HTML, CSS & Javascript</h1>
+            <p>
+                Credits: <a href="https://www.udemy.com/course/50-projects-50-days/">50 Projects 50 Days by</a>
+                <b>
+                    <a href="https://www.youtube.com/traversymedia">Brad Traversy</a> &
+                    <a href="https://www.youtube.com/florinpop">Florin Pop</a>
+                </b>
+            </p>
+        </div>
+    </header>
+
+    <section id="projects" class="projects"></section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-a">
+                <div>
+                    <h2>About The Projects</h2>
+                    <p>
+                        50 Mini Web Projects using Vannila HTML, CSS and Javascript.
+                        Every project is different and involves fundamental concepts of HTML, CSS and Javascript. All
+                        the Projects are responsive.
+                        <br>
+                        Concepts I learnt includes-
+                    <ul style="text-align: left;">
+                        <li>1. Webpage Layout Using HTML</li>
+                        <li>2. CSS Stylings</li>
+                        <li>3. Responsive Design</li>
+                        <li>4. Key CSS Concepts like Flex, transform, transition, keyframes, etc</li>
+                        <li>5. DOM Manipulations using Javascript</li>
+                        <li>6. Fetch APIs/Axios</li>
+                        <li>7. Array methods - map(), filter(), reduce(), etc</li>
+                        </p>
+                        <p></p>
+                </div>
+
+                <a class="repo" href="https://github.com/pranshukas/50-Projects-50-Days" target="_blank">
+                    <i class="fab fa-github fa-4x"></i>
+                    <p>Github Repo For All Projects</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Made With ❤️ by <a href="https://github.com/pranshukas">Pranshu Kashyap</a>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
 </html>
