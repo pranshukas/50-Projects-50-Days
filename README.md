@@ -1,6 +1,24 @@
-# 50-Projects-50-Days
+# 50-Projects-50-Days 💻
 
-50 Mini Web Projects using Vannila HTML, CSS &amp; Javascript
+50 Mini Web Projects using Vannila HTML, CSS &amp; Javascript. It contains lots of fun and interesting small Projects to understand fundamentals of HTML, CSS and JS. All the Webpages are responsive and build without using any Frameworks. 
+
+## My Key Learnings 📚
+
+- Webpage Layout and strructuring Using HTML
+- CSS Stylings
+- Responsive Design
+- Key CSS Concepts like Flex, transform (rotate, translate, skew), transition, keyframes, etc
+- DOM Manipulations, Javascript Events
+- Fetching data & working with 3rd party APIs using Fetch/Axios
+- Array methods - map(), filter(), reduce(), etc
+- JSON, Promises & Async/Await, Local storage APIs, Canvas API & Animation, etc.
+
+## 🖱️ Deployment 🌐 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fab1c8fa-c6e5-41f8-91a0-18ef736dd502/deploy-status)](https://app.netlify.com/sites/50projects-50-days/deploys)
+
+Website Link - [50 Project 50 Days](https://50projects-50-days.netlify.app/)  
+
 
 |  #  | Project                                                                                                                     | Live Demo                                                                         |
 | :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -54,3 +72,8 @@
 | 48  | [Random Image Feed](https://github.com/pranshukas/50-Projects-50-Days/tree/main/48.%20Random%20Image%20Feed)                         | [Live Demo](https://50projects-50-days.netlify.app/48.%20random%20image%20feed/)             |
 | 49  | [Todo List](https://github.com/pranshukas/50-Projects-50-Days/tree/main/49.%20Todo%20List)                                         | [Live Demo](https://50projects-50-days.netlify.app/49.%20todo%20list/)                     |
 | 50  | [Insect Catch Game](https://github.com/pranshukas/50-Projects-50-Days/tree/main/50.%20Insect%20Catch%20Game)                         | [Live Demo](https://50projects-50-days.netlify.app/50.%20insect%20catch%20game/)             |
+
+
+## Acknowledgments 💳
+
+[50 Projects 50 Days](https://www.udemy.com/course/50-projects-50-days/) by [Brad Traversy](https://www.youtube.com/traversymedia) & [Florin Pop](https://www.youtube.com/florinpop) 
